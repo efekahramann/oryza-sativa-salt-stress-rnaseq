@@ -1,5 +1,4 @@
 # oryza-sativa-salt-stress-rnaseq
-# Oryza sativa Salt Stress RNA-seq Analysis
 
 This repository contains the Linux pipeline scripts and R analysis codes used for the transcriptomic analysis of *Oryza sativa* under salt stress.
 
