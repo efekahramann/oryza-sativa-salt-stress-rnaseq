@@ -36,12 +36,12 @@ Oryza_sativa.IRGSP-1.0.59.gtf
 ## Repository Structure
 
 ```text
-linux_pipeline/
+fastq_to_count/
 ```
 Contains shell scripts used for data download, quality control, preprocessing, alignment and read counting.
 
 ```text
-r_analysis/
+differential_expression_analysis/
 ```
 
 Contains R scripts used for DESeq2 analysis, PCA, MA plot, volcano plot, heatmap and top up/down gene visualizations.
