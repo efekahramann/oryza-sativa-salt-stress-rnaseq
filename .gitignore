@@ -14,7 +14,7 @@ STAR_index/
 *_STARtmp/
 *.Log.out
 *.Log.final.out
-*.SJ.out.tab
+*.SJ.out.tabc
 
 # SortMeRNA outputs
 SortMeRNA_results/
