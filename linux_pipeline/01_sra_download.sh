@@ -1,12 +1,31 @@
-##terminali aç ve aşağıdaki kopyala:
+#!/bin/bash
+# This script was adapted from the RNA-seq analysis workflow provided by Prof. Dr. Emre Yörük and reorganized for this thesis project.
 
-wget --output-document sratoolkit.tar.gz https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-ubuntu64.tar.gz
+# ============================================================
+# 01_sra_download.sh
+# SRA Toolkit installation and paired-end FASTQ download
+# ============================================================
 
+# Download SRA Toolkit
+wget --output-document sratoolkit.tar.gz \
+https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/current/sratoolkit.current-ubuntu64.tar.gz
+
+# Extract SRA Toolkit
 tar -vxzf sratoolkit.tar.gz
 
-export PATH=$PATH:$PWD/sratoolkit.3.1.0-ubuntu64   direkt terminale yapıştır
-    nano .bashrc de en alta yazabilirsin Control O enter xontrol X ile çıkıp
+# Add SRA Toolkit to PATH
+# Note: update the folder name if a newer version is downloaded.
+export PATH=$PATH:$PWD/sratoolkit.3.1.0-ubuntu64/bin
 
-fasterq-dump SRR******* --split-files -e 11 -O .     paired end dosyalar için
-                                                     e <- kullanılan çekirdek sayısı
-                                                     . <- bulunduğumuz klasöre indirmemizi sağlar
+# Example command for downloading paired-end RNA-seq data
+# Replace SRRXXXXXXX with the target SRA accession number.
+
+fasterq-dump SRRXXXXXXX \
+    --split-files \
+    -e 4 \
+    -O .
+
+# Explanation:
+# --split-files : separates paired-end reads into _1 and _2 FASTQ files
+# -e 4          : number of threads
+# -O .          : saves output files into the current directory
