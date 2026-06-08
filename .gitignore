@@ -1,0 +1,34 @@
+# Raw sequencing files
+*.fastq
+*.fq
+*.fastq.gz
+*.fq.gz
+
+# Alignment files
+*.bam
+*.sam
+*.bai
+
+# STAR index and outputs
+STAR_index/
+*_STARtmp/
+*.Log.out
+*.Log.final.out
+*.SJ.out.tab
+
+# SortMeRNA outputs
+SortMeRNA_results/
+sortmerna/
+
+# Large intermediate files
+*.out
+*.summary
+
+# R temporary files
+.Rhistory
+.RData
+.Rproj.user/
+
+# System files
+.DS_Store
+Thumbs.db
